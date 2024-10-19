@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Front-end Execution Test</title>
+</head>
+
+<body>
+
+    <h1>This is a test.</h1>
+    <script>
+        // fetch('/db/user')
+        //     // fetch returns a response object
+        //     .then(response => response.json())
+        //     // then we use a call back function where the response object (left) we obtained from the fetch
+        //     // will be passed as a parameter and return a javascript object (converting the object to a json)
+        //     .then(users => console.log(users));
+        //     // then the users data is obtained and passed as a parameter to print onto the frontend console
+
+        const myData = {
+            user_firstName: "Cris",
+            user_lastName: "Bahena",
+            user_email: "crisbahena50@yahoo.com",
+            user_age: 23,
+            user_weight: 110,
+            user_height: 160,
+            user_goalWeight: 161,
+            user_activityLevel: "Moderate",
+        }
+
+        addUser(myData);
+
+        async function addUser(userData) {
+            try {
+                const response = await fetch('/db/user', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify(userData)
+                });
+
+                if (!response.ok) {
+                    const errorData = await response.json();
+                    throw new Error(errorData.error);
+                }
+
+                const newUser = await response.json();
+                console.log('User added:', newUser);
+            } catch (error) {
+                console.error('Error adding user:', error);
+            }
+        }
+
+
+        const temp = {
+            user_firstName: "Edgar",
+            user_lastName: "Bahena",
+            user_email: "edgarbahena1998@gmail.com",
+            user_age: 26,
+            user_weight: 190,
+            user_height: 167.64,
+            user_goalWeight: 150,
+            user_activityLevel: "Moderate",
+        }
+
+        addUser(temp);
+
+
+    </script>
+
+
+
+
+</body>
+
+</html>
