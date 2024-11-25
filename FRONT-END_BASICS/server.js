@@ -36,6 +36,38 @@ app.get('/info/:dynamic', (req, res) => {
     res.status(200).json({ info: 'preset text' })
 })
 
+// POST TDEECAL ROUTE
+app.post('/api/calculate', (req, res) => {
+    if (req.method === 'POST') {
+        // Extract data from the request body
+        const { gender, age, weight, height, activity } = req.body;
+
+        // Log or process the data (e.g., calculate TDEE)
+        console.log('Received Data:', { gender, age, weight, height, activity });
+
+        // Perform any calculations or processing you need here
+        const tdee = calculateTDEE(gender, age, weight, height, activity);
+
+
+        // Respond with the result
+        res.status(200).json({ tdee });
+    } else {
+        res.status(405).json({ message: 'Method Not Allowed' });
+    }
+
+})
+
+
+function calculateTDEE(gender, age, weight, height, activity) {
+    // Mifflin = (10 * m + 6.25 * h - 5 * a) + s
+    // m = mass in kg, h = height in cm, a = age in years, s = 5 for male or -151 for females
+    const mass = 0.453592 * weight;
+    const mifflin = (10 * mass) + (6.25 * height) - (5 * age) + gender;
+    console.log(mifflin);
+
+    return mifflin * activity;
+}
+
 
 // POST SIGN UP ROUTE (Sending to server-from-client)
 app.post('/signup', (req, res) => {
@@ -100,23 +132,6 @@ app.get('/db/user', (req, res) => {
         res.json(results); // Send results directly
     });
 });
-
-
-
-app.get('/api/users', (req, res) => {
-    const users = [{
-        id: '123',
-        name: 'Shaun',
-    }, {
-        id: '234',
-        name: 'Bob',
-    }, {
-        id: '345',
-        name: 'Sue',
-    }];
-
-    res.json(users);
-})
 
 
 
