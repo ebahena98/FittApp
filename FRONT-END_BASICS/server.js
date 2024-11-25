@@ -15,6 +15,8 @@ var connection = mysql.createConnection({
     database: 'fitness_app',
 });
 
+
+
 // DEFAULT ROUTE
 app.get('/', (req, res) => {
     res.status(200).send('login.html')
