@@ -19,7 +19,8 @@ var connection = mysql.createConnection({
 
 // DEFAULT ROUTE
 app.get('/', (req, res) => {
-    res.status(200).send('login.html')
+    // res.status(200).send('login.html')
+    res.sendFile(path.join(__dirname, 'signup.html'));
 })
 
 // GET ROUTE
