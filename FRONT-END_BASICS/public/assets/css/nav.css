@@ -1,13 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
-:root {
-    --accent-color: #8672FF;
-    --base-color: white;
-    --text-color: #2E2B41;
-    --input-color: #F3F0FF;
-}
-
 * {
+    box-sizing: border-box;
     margin: 0px;
     padding: 0px;
 }
@@ -27,7 +21,6 @@ body {
     background-position: right;
     overflow: hidden;
 }
-
 
 .navbar ul {
     list-style: none;
@@ -53,10 +46,9 @@ body {
     float: left;
 }
 
-
 .wrapper {
     box-sizing: border-box;
-    background-color: var(--base-color);
+    background-color: white;
     height: 100vh;
     width: max(40%, 600px);
     padding: 10px;
@@ -87,21 +79,6 @@ form>div {
     width: 100%;
     display: flex;
     justify-content: center;
-}
-
-form label {
-    flex-shrink: 0;
-    height: 50px;
-    width: 50px;
-    background-color: var(--accent-color);
-    fill: var(--base-color);
-    color: var(--base-color);
-    border-radius: 10px 0 0 10px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 1.5rem;
-    font-weight: 500;
 }
 
 form input {
@@ -159,30 +136,50 @@ form button:focus {
     background-color: var(--text-color);
 }
 
-a {
-    text-decoration: none;
-    color: var(--accent-color)
+table {
+    display: table;
+    background-color: transparent;
+    border-spacing: 0;
+    border-collapse: seperate;
+    border-color: gray;
 }
 
-a:hover {
-    text-decoration: underline;
+
+table td.col1 {
+    font-weight: bold;
+    text-align: center;
+    font-size: 13px;
 }
 
-@media(max-width: 1100px) {
-    .wrapper {
-        width: min(600px, 100%);
-        border-radius: 0;
-    }
+table td {
+    padding: 7px 10px;
 }
 
-form div.incorrect label {
-    background-color: #f06272;
+.form-control {
+    display: block;
+    width: 100%;
+    height: 34px;
+    padding: 6px 12px;
+    font-size: 14px;
+    line-height: 1.42857143;
+    color: #3f3f3f;
+    background-color: #fff;
+    background-image: none;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+    -webkit-transition: border-color ease-in-out .15s, -webkit-box-shadow ease-in-out .15s;
+    -o-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+    transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
 }
 
-form div.incorrect input {
-    border-color: #f06272;
-}
-
-#error-message {
-    color: #f06272;
+.btn-submit {
+    margin-top: 10px;
+    background-color: #0873d1;
+    background-image: linear-gradient(to bottom, #0088cc, #0044cc);
+    background-repeat: repeat-x;
+    border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
+    color: #ffffff;
+    text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
 }

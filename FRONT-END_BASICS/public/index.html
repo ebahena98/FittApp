@@ -5,71 +5,121 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Front-end Execution Test index file</title>
-    <link rel="stylesheet" href="./assets/css/style.css">
+    <title>Index</title>
+    <link rel="stylesheet" href="./assets/css/indexPage.css">
     <script type="text/javascript" src="./formValidation.js" defer></script>
 </head>
 
 <body>
+
+    <nav class="navbar">
+        <ul>
+            <li><a href='home.html'>Home</a></li>
+            <li><a href='signup.html'>Signup</a></li>
+            <li><a href='login.html'>Login</a></li>
+            <li><a href='index.html'>TDEE Calculator</a></li>
+        </ul>
+    </nav>
+
+
+
     <div class="wrapper">
-        <h1>Signup</h1>
-        <p id="error-message"></p>
+        <h1>TDEE Calculator</h1>
         <form id="form">
             <div>
-                <label for="firstname-input">
-                    <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px"
-                        fill="#000000">
-                        <path
-                            d="M480-480q-66 0-113-47t-47-113q0-66 47-113t113-47q66 0 113 47t47 113q0 66-47 113t-113 47ZM160-160v-112q0-34 17.5-62.5T224-378q62-31 126-46.5T480-440q66 0 130 15.5T736-378q29 15 46.5 43.5T800-272v112H160Z" />
-                    </svg>
-                </label>
-                <input type="text" name="firstname" id="firstname-input" placeholder="Firstname">
+                <table>
+                    <tbody>
+                        <tr>
+                            <td class="col1">Gender</td>
+                            <td>
+                                <label>
+                                    <input type="radio" name="gender" id="male" value="male" checked>Male
+                                </label>
+                                <label>
+                                    <input type="radio" name="gender" id="female" value="female">Female
+                                </label>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td class="col1">Age</td>
+                            <td>
+                                <label>
+                                    <input type="text" class="form-control" name="age" id="age" maxlength="3" value>
+                                </label>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td class="col1">Weight</td>
+                            <td>
+                                <label>
+                                    <input type="text" class="form-control" name="weight" id="weight" maxlength="3"
+                                        value>
+                                </label>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td class="col1">Height</td>
+                            <td>
+                                <select name="height" class="form-control" id="height" style="width:100px">
+                                    <option value="55">4ft 7in</option>
+                                    <option value="56">4ft 8in</option>
+                                    <option value="57">4ft 9in</option>
+                                    <option value="58">4ft 10in</option>
+                                    <option value="59">4ft 11in</option>
+                                    <option value="60">5ft 0in</option>
+                                    <option value="60">5ft 1in</option>
+                                    <option value="60">5ft 2in</option>
+                                    <option value="60">5ft 3in</option>
+                                    <option value="60">5ft 4in</option>
+                                    <option value="60">5ft 5in</option>
+                                    <option value="60">5ft 6in</option>
+                                    <option value="60">5ft 7in</option>
+                                    <option value="60">5ft 8in</option>
+                                    <option value="60">5ft 9in</option>
+                                    <option value="60">5ft 10in</option>
+                                    <option value="60">5ft 11in</option>
+                                    <option value="60">6ft 0in</option>
+                                    <option value="60">6ft 1in</option>
+                                    <option value="60">6ft 2in</option>
+                                    <option value="60">6ft 3in</option>
+                                    <option value="60">6ft 4in</option>
+                                    <option value="60">6ft 5in</option>
+                                    <option value="60">6ft 6in</option>
+                                    <option value="60">6ft 7in</option>
+                                    <option value="60">6ft 8in</option>
+                                    <option value="60">6ft 9in</option>
+                                    <option value="60">6ft 10in</option>
+                                    <option value="60">6ft 11in</option>
+                                    <option value="60">7ft 0in</option>
+                                </select>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td class="col1">Activity</td>
+                            <td>
+                                <select name="activity" class="form-control" id="activity">
+                                    <option value="1.2" selected>Sedentary (office)</option>
+                                    <option value="1.375" selected>Light Exercise (1-2 days)</option>
+                                    <option value="1.55" selected>Moderate Exercise (3-5 days)</option>
+                                    <option value="1.725" selected>Heavy Exercise (6 days)</option>
+                                    <option value="1.9" selected>Athlete (twice a day, 2x)</option>
+                                </select>
+                            </td>
+                        </tr>
+
+                    </tbody>
+                </table>
             </div>
-            <div>
-                <label for="lastname-input">
-                    <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px"
-                        fill="#000000">
-                        <path
-                            d="M480-480q-66 0-113-47t-47-113q0-66 47-113t113-47q66 0 113 47t47 113q0 66-47 113t-113 47ZM160-160v-112q0-34 17.5-62.5T224-378q62-31 126-46.5T480-440q66 0 130 15.5T736-378q29 15 46.5 43.5T800-272v112H160Z" />
-                    </svg>
-                </label>
-                <input type="text" name="lastname" id="lastname-input" placeholder="Lastname">
-            </div>
-            <div>
-                <label for="email-input">
-                    <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px"
-                        fill="#000000">
-                        <path
-                            d="M160-160q-33 0-56.5-23.5T80-240v-480q0-33 23.5-56.5T160-800h640q33 0 56.5 23.5T880-720v480q0 33-23.5 56.5T800-160H160Zm320-280L160-640v400h640v-400L480-440Zm0-80 320-200H160l320 200ZM160-640v-80 480-400Z" />
-                    </svg>
-                </label>
-                <input type="email" name="email" id="email-input" autocomplete="on" placeholder="Email">
-            </div>
-            <div>
-                <label for="password-input">
-                    <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px"
-                        fill="#000000">
-                        <path
-                            d="M240-80q-33 0-56.5-23.5T160-160v-400q0-33 23.5-56.5T240-640h40v-80q0-83 58.5-141.5T480-920q83 0 141.5 58.5T680-720v80h40q33 0 56.5 23.5T800-560v400q0 33-23.5 56.5T720-80H240Zm240-200q33 0 56.5-23.5T560-360q0-33-23.5-56.5T480-440q-33 0-56.5 23.5T400-360q0 33 23.5 56.5T480-280ZM360-640h240v-80q0-50-35-85t-85-35q-50 0-85 35t-35 85v80Z" />
-                    </svg>
-                </label>
-                <input type="password" name="password" id="password-input" autocomplete="on" placeholder="Password">
-            </div>
-            <div>
-                <label for="repeat-password-input">
-                    <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px"
-                        fill="#000000">
-                        <path
-                            d="M240-80q-33 0-56.5-23.5T160-160v-400q0-33 23.5-56.5T240-640h40v-80q0-83 58.5-141.5T480-920q83 0 141.5 58.5T680-720v80h40q33 0 56.5 23.5T800-560v400q0 33-23.5 56.5T720-80H240Zm240-200q33 0 56.5-23.5T560-360q0-33-23.5-56.5T480-440q-33 0-56.5 23.5T400-360q0 33 23.5 56.5T480-280ZM360-640h240v-80q0-50-35-85t-85-35q-50 0-85 35t-35 85v80Z" />
-                    </svg>
-                </label>
-                <input type="password" name="repeat-password" id="repeat-password-input" autocomplete="on"
-                    placeholder="Repeat Password">
-            </div>
-            <button type="submit">SIGN UP</button>
+            <button type="btn-submit" class="btn-submit">Calculate</button>
         </form>
-        <p>Already have an Account? <a href="./login.html">Login</a></p>
     </div>
+
+
+
 </body>
 
 </html>

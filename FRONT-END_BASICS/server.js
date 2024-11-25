@@ -1,4 +1,4 @@
-// cmd: npx nodemon src/server.js
+// cmd: npx nodemon server.js
 const express = require('express');
 const path = require('path');
 const mysql = require('mysql');
@@ -19,8 +19,13 @@ var connection = mysql.createConnection({
 
 // DEFAULT ROUTE
 app.get('/', (req, res) => {
-    // res.status(200).send('login.html')
-    res.sendFile(path.join(__dirname, 'signup.html'));
+    res.status(200).send('index.html')
+    // res.sendFile(path.join(__dirname, 'index.html'));
+})
+
+// HOME ROUTE
+app.get('/home', (req, res) => {
+    res.status(200).send('./home.html')
 })
 
 // GET ROUTE
