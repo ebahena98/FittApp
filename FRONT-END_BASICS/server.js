@@ -4,9 +4,15 @@ const path = require('path');
 const mysql = require('mysql');
 const app = express();
 const port = 8080;
+
+
+
+
 //USE FUNCTIONS
 app.use(express.json());
 app.use(express.static('public'));
+
+
 // DATABASE CONNECTION
 var connection = mysql.createConnection({
     host: 'localhost',
@@ -56,6 +62,8 @@ app.post('/api/calculate', (req, res) => {
     }
 
 })
+
+
 
 
 function calculateTDEE(gender, age, weight, height, activity) {
