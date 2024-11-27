@@ -1,0 +1,36 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial;
+}
+
+
+.nav {
+    display: flex;
+    list-style-type: none;
+    justify-content: space-around;
+    background-color: #333;
+}
+
+.nav li {
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 20px;
+    padding: 3px 15px;
+    margin: 0px 25px;
+}
+
+.nav li:hover {
+    background-color: #05bdf0;
+    color: #f2f2f2;
+}
+
+
+.nav li a {
+    text-decoration: none;
+    color: #f2f2f2;
+}
