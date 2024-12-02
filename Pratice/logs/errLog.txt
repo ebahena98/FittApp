@@ -1,2 +1,22 @@
 20241202	05:13:39	a6e18e6a-2c12-414f-a7b6-2534156e2486	Error: Not allowed by CORS
 20241202	05:27:09	796d3a14-0383-467d-9a37-e79aac7e4675	Error: ENOENT: no such file or directory, stat 'D:\app\Pratice\public\index.html'
+20241202	12:55:32	2d978815-8131-463e-95ec-26b07f1ed454	Error: Cannot set headers after they are sent to the client
+20241202	12:56:31	8b6f9728-35bd-49ed-880f-e618f9aed8e6	Error: Cannot set headers after they are sent to the client
+20241202	13:20:10	bf9da781-8b8a-4fb7-914c-d68e0a14aa43	TypeError: Assignment to constant variable.
+20241202	14:37:39	eb07396c-3eb8-497e-8dfb-77dfdc649edf	ReferenceError: connection is not defined
+20241202	14:38:52	6ea14b40-f3dd-4788-b5c8-b0f5ff38f93d	ReferenceError: connection is not defined
+20241202	14:38:54	839cb968-47e1-4284-92db-b677378651c9	ReferenceError: connection is not defined
+20241202	14:39:17	20ef9693-175f-41ea-bd08-84c3b5f6afc0	ReferenceError: connection is not defined
+20241202	14:40:16	be8e756d-43ee-42de-ad6a-4d032bb16f2c	ReferenceError: connection is not defined
+20241202	14:41:11	a6b0b688-69a2-4e03-8153-d681cde8c67a	ReferenceError: connection is not defined
+20241202	14:41:40	5efa463e-314d-4cba-b920-782409c9db59	ReferenceError: connection is not defined
+20241202	14:42:14	016b7de4-c1c1-4dfe-b593-82c784f5641a	ReferenceError: connection is not defined
+20241202	14:42:34	aa3f20b5-7db3-4cfb-824d-79b7b48533fd	ReferenceError: connection is not defined
+20241202	14:48:12	adeac7a0-4c40-4e00-ac63-635b9e59c6ef	ReferenceError: connection is not defined
+20241202	14:48:52	3222ba91-da80-4f01-9d99-73c1f46eea48	TypeError: connectDB.query is not a function
+20241202	14:54:20	ba8be16e-1a9e-4b5f-858f-c9827928e26d	TypeError: connectDB.query is not a function
+20241202	14:54:28	a55928b6-4227-46bd-bc26-f6b8d7766a08	ReferenceError: connection is not defined
+20241202	15:00:18	c2937c67-5ebd-4e0f-bdb9-131f6f0a347c	ReferenceError: connection is not defined
+20241202	15:01:13	751072ab-50b0-4f33-b6ca-ab22b2a7f664	TypeError: connectDB.query is not a function
+20241202	15:01:29	20c57c43-e4e5-48bd-bcef-0b2f5a01bc93	TypeError: connectDB.query is not a function
+20241202	15:03:04	b93667a3-6d12-419d-9d80-949976f4cb11	TypeError: connectDB.query is not a function

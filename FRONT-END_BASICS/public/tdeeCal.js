@@ -18,7 +18,7 @@ function handleFormSubmit(event) {
     };
 
     // Send data to the Next.js API route using fetch
-    fetch('/api/calculate', {
+    fetch('/api/tdeeVal', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',

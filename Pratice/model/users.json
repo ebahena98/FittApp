@@ -1,12 +1,8 @@
 [
     {
-        "id": 1,
         "firstname": "Edgar",
-        "lastname": "Bahena"
-    },
-    {
-        "id": 2,
-        "firstname": "Cris",
-        "lastname": "Bahena"
+        "lastname": "Bahena",
+        "email": "edgarbahena1998@gmail.com",
+        "password": "Posion123!"
     }
 ]
