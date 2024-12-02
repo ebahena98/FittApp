@@ -1,34 +1,17 @@
 const express = require('express');
 const router = express.Router();
-const data = {};
-data.users = require('../../model/users.json');
+const usersController = require('../../controllers/usersController');
 
 
 router.route('/')
-    .get((req, res) => {
-        res.json(data.users);
-    })
-    .post((req, res) => {
-        res.json({
-            "firstname": req.body.firstname,
-            "lastname": req.body.lastname
-        });
-    })
-    .put((req, res) => {
-        res.json({
-            "firstname": req.body.firstname,
-            "lastname": req.body.lastname
-        });
-    })
-    .delete((req, res) => {
-        res.json({ "id": req.body.id })
-    });
+    .get(usersController.getAllUsers)
+    .post(usersController.createNewUser)
+    .put(usersController.updateUser)
+    .delete(usersController.deleteUser);
 
 
 router.route('/:id')
-    .get((req, res) => {
-        res.json({ "id": req.params.id });
-    });
+    .get(usersController.getUser);
 
 
 module.exports = router;

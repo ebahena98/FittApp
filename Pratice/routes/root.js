@@ -37,10 +37,5 @@ router.get('/about(.html)?', (req, res) => {
     res.status(200).sendFile(path.join(__dirname, '..', 'public', 'about.html'));
 })
 
-// REDIRECT OLD PAGE IF MOVED
-router.get('/old-page(.html)?', (req, res) => {
-    res.redirect(301, '/home.html');
-})
-
 
 module.exports = router;

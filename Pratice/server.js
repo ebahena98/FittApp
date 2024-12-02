@@ -1,7 +1,10 @@
+// https://www.youtube.com/watch?v=f2EqECiTBL8 @ 3:23:00
+
 const express = require('express');
 const fs = require('fs');
 const path = require('path');
 const cors = require('cors');
+const corsOptions = require('./config/corsOptions');
 const { logger } = require('./middleware/logEvents');
 const errorHandler = require('./middleware/errorHandler');
 const http = require('http');
@@ -13,31 +16,17 @@ const port = 8080;
 // CUSTOM MIDDLEWARE LOGGER 
 app.use(logger);
 
-// Cross Origin Resource Sharing
-const whitelist = ['http://localhost:5500', 'http://localhost:8080']
-const corsOptions = {
-    origin: (origin, callback) => {
-        if (whitelist.indexOf(origin) !== -1 || !origin) {
-            callback(null, true)
-        } else {
-            callback(new Error('Not allowed by CORS'));
-        }
-    },
-    optionsSuccessStatus: 200
-}
-
+// CROSS ORIGIN RESOURCE SHARING
 app.use(cors(corsOptions));
 
 // MIDDLEWARE
 app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
 app.use('/', express.static(path.join(__dirname, '/public')));
-app.use('/subdir', express.static(path.join(__dirname, '/public')));
 
 
 // routes
 app.use('/', require('./routes/root'));
-app.use('/subdir', require('./routes/subdir'));
 app.use('/users', require('./routes/api/users'));
 
 
