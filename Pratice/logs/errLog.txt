@@ -1,1 +1,2 @@
 20241202	05:13:39	a6e18e6a-2c12-414f-a7b6-2534156e2486	Error: Not allowed by CORS
+20241202	05:27:09	796d3a14-0383-467d-9a37-e79aac7e4675	Error: ENOENT: no such file or directory, stat 'D:\app\Pratice\public\index.html'

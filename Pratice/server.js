@@ -25,66 +25,20 @@ const corsOptions = {
     },
     optionsSuccessStatus: 200
 }
+
 app.use(cors(corsOptions));
 
 // MIDDLEWARE
 app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
-app.use(express.static(path.join(__dirname, '/public')));
+app.use('/', express.static(path.join(__dirname, '/public')));
+app.use('/subdir', express.static(path.join(__dirname, '/public')));
 
 
-//DEFAULT ROUTE (INDEX.HTML)
-app.get('^/$|/index(.html)?', (req, res) => {
-    // res.sendFile('./views/index.html', { root: __dirname });
-    res.status(200).sendFile(path.join(__dirname, 'public', 'index.html'));
-})
-
-// HOME ROUTE
-app.get('/home(.html)?', (req, res) => {
-    res.status(200).sendFile(path.join(__dirname, 'public', 'home.html'));
-})
-
-// REGISTER ROUTE
-app.get('/register(.html)?', (req, res) => {
-    res.status(200).sendFile(path.join(__dirname, 'public', 'register.html'));
-})
-
-
-// LOGIN ROUTE
-app.get('/login(.html)?', (req, res) => {
-    res.status(200).sendFile(path.join(__dirname, 'public', 'login.html'));
-})
-
-// TDEE ROUTE
-app.get('/tdee(.html)?', (req, res) => {
-    res.status(200).sendFile(path.join(__dirname, 'public', 'tdee.html'));
-})
-
-// CONTACT ROUTE
-app.get('/contact(.html)?', (req, res) => {
-    res.status(200).sendFile(path.join(__dirname, 'public', 'contact.html'));
-})
-
-// ABOUT ROUTE
-app.get('/about(.html)?', (req, res) => {
-    res.status(200).sendFile(path.join(__dirname, 'public', 'about.html'));
-})
-
-
-
-// REDIRECT OLD PAGE IF MOVED
-app.get('/old-page(.html)?', (req, res) => {
-    res.redirect(301, '/home.html');
-})
-
-
-// Route handlers
-app.get('/hello(.html)?', (req, res, next) => {
-    console.log('attempted to load hello.html');
-    next();
-}, (req, res) => {
-    res.send('Hello World!');
-});
+// routes
+app.use('/', require('./routes/root'));
+app.use('/subdir', require('./routes/subdir'));
+app.use('/users', require('./routes/api/users'));
 
 
 // ANYTHING ENTERED IN URL 404 PAGE
