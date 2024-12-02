@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TDEE Calculator</title>
+    <link rel="stylesheet" href="assets/css/navbar.css">
+    <link rel="stylesheet" href="assets/css/table.css">
+
+</head>
+
+<body>
+
+    <ul class="nav">
+        <li><a class="icon" href="./index.html">
+                <span class="material-symbols-outlined">home</span>
+            </a></li>
+        <li><a href="./login.html">Login</a></li>
+        <li><a href="./register.html">Register</a></li>
+        <li><a href="./tdee.html">TDEE Calculator</a></li>
+        <li><a href="./about.html">About</a></li>
+    </ul>
+
+    <div class="container">
+        <h1>TDEE Calculator</h1>
+        <form id="form">
+            <div>
+                <table>
+                    <tbody>
+                        <tr>
+                            <td class="col1">Gender</td>
+                            <td>
+                                <select name="gender" class="form-control" id="gender" style="width:100px">
+                                    <option value="5">Male</option>
+                                    <option value="-161">Female</option>
+                                </select>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td class="col1">Age</td>
+                            <td>
+                                <label>
+                                    <input type="text" class="form-control" name="age" id="age" maxlength="3"
+                                        placeholder="Age" style="width:60px;" value>
+                                </label>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td class="col1">Weight</td>
+                            <td>
+                                <label>
+                                    <input type="text" class="form-control" name="weight" id="weight" maxlength="3"
+                                        placeholder="lbs" style="width:60px;" value>
+                                </label>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td class="col1">Height</td>
+                            <td>
+                                <select name="height" class="form-control" id="height" style="width:100px">
+                                    <option value="139.7">4ft 7in</option>
+                                    <option value="142.24">4ft 8in</option>
+                                    <option value="144.78">4ft 9in</option>
+                                    <option value="147.32">4ft 10in</option>
+                                    <option value="149.86">4ft 11in</option>
+                                    <option value="152.4">5ft 0in</option>
+                                    <option value="154.94">5ft 1in</option>
+                                    <option value="157.48">5ft 2in</option>
+                                    <option value="160.02">5ft 3in</option>
+                                    <option value="162.56">5ft 4in</option>
+                                    <option value="165.1">5ft 5in</option>
+                                    <option value="167.64">5ft 6in</option>
+                                    <option value="170.18">5ft 7in</option>
+                                    <option value="172.72">5ft 8in</option>
+                                    <option value="175.26">5ft 9in</option>
+                                    <option value="177.8">5ft 10in</option>
+                                    <option value="180.34">5ft 11in</option>
+                                    <option value="182.88">6ft 0in</option>
+                                    <option value="185.42">6ft 1in</option>
+                                    <option value="187.96">6ft 2in</option>
+                                    <option value="190.5">6ft 3in</option>
+                                    <option value="193.04">6ft 4in</option>
+                                    <option value="195.58">6ft 5in</option>
+                                    <option value="198.12">6ft 6in</option>
+                                    <option value="200.66">6ft 7in</option>
+                                    <option value="203.2">6ft 8in</option>
+                                    <option value="205.74">6ft 9in</option>
+                                    <option value="208.28">6ft 10in</option>
+                                    <option value="210.82">6ft 11in</option>
+                                    <option value="213.36">7ft 0in</option>
+                                </select>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td class="col1">Activity</td>
+                            <td>
+                                <select name="activity" class="form-control" id="activity">
+                                    <option value="1.2" selected>Sedentary (office)</option>
+                                    <option value="1.375" selected>Light Exercise (1-2 days)</option>
+                                    <option value="1.55" selected>Moderate Exercise (3-5 days)</option>
+                                    <option value="1.725" selected>Heavy Exercise (6 days)</option>
+                                    <option value="1.9" selected>Athlete (twice a day, 2x)</option>
+                                </select>
+                            </td>
+                        </tr>
+
+
+                    </tbody>
+                </table>
+            </div>
+
+            <button class="btn-submit" type="btn-submit">Calculate</button>
+        </form>
+    </div>
+
+
+
+</body>
+
+</html>
